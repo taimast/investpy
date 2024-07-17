@@ -23,6 +23,7 @@ def economic_calendar(
     categories=None,
     from_date=None,
     to_date=None,
+    url = "https://www.investing.com/economic-calendar/Service/getCalendarFilteredData",
 ):
     """
     This function retrieves the economic calendar, which covers financial events and indicators from all over the world
@@ -138,8 +139,6 @@ def economic_calendar(
         raise ValueError(
             "ERR#0114: the introduced date value must be a string unless it is None."
         )
-
-    url = "https://www.investing.com/economic-calendar/Service/getCalendarFilteredData"
 
     headers = {
         "User-Agent": random_user_agent(),
